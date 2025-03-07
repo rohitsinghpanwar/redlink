@@ -63,7 +63,7 @@ function App() {
       </div>
 
       <div className="flex flex-col md:flex-row w-full justify-center items-center px-4">
-        <form onSubmit={handlesubmit} className="border-2 border-red-600 rounded-xl flex flex-col p-5 m-2 w-full md:w-[40vw] text-xl gap-4 h-[50vh]">
+        <form onSubmit={handlesubmit} className="border-2 border-red-600 rounded-xl flex flex-col p-5 m-2 w-full md:w-[40vw] md:text-xl gap-4 md:h-[50vh] ">
           <p className='font-bold italic'>Save & Reuse – Instantly Access Your Frequently Used Text & Links!</p>
           <label className="flex flex-col w-full">Name
             <input type="text" onChange={handlechange} name="name" value={details.name} className="bg-violet-800 rounded-lg h-12 w-full px-2" required placeholder="Enter the name of the text" />
@@ -74,13 +74,13 @@ function App() {
           <button type="submit" className="border-white border text-white py-2 px-4 rounded-lg hover:bg-white/50 transition">Save</button>
         </form>
 
-        <ul className="w-full md:w-[40vw] h-[50vh] overflow-y-scroll border-2 border-red-600 rounded-xl p-2 m-2 flex flex-col items-center gap-2 scroll-smooth   md:text-lg">
+        <ul className="w-full md:w-[50vw] h-[50vh] overflow-y-scroll border-2 border-red-600 rounded-xl p-2 m-2 flex flex-col items-center gap-2 scroll-smooth   md:text-lg">
           <h2 className="text-2xl font-bold italic">Saved Links</h2>
           {Object.entries(savedlinks).length > 0 ? (
             Object.entries(savedlinks).map(([key, value]) => (
-              <li key={key} className="border w-full flex flex-col md:flex-row items-center justify-between p-1 bg-violet-800 transition-all ease-in-out duration-500 rounded-xl hover:shadow-sm shadow-white md:p-2">
+              <li key={key} className="border w-full flex flex-col md:grid md:grid-cols-[1fr_3fr_0.5fr] md:gap-5 items-center justify-between p-1 bg-violet-800 transition-all ease-in-out duration-500 rounded-xl hover:shadow-sm shadow-white md:p-2">
                 <strong className="text-center md:text-left">{key}</strong>
-                <h1 className="break-all text-center md:text-left">{value}</h1>
+                <h1 className="break-all text-center md:text-left ">{value}</h1>
                 <div className="flex gap-2 mt-2 md:mt-0">
                   <img src={copyIcon} alt="Copy" className="invert w-6 h-6  cursor-pointer" onClick={() => handlecopy(value)} />
                   <img src={deleteIcon} alt="Delete" className="w-6 h-6  invert cursor-pointer" onClick={() => handledelete(key)} />
@@ -104,7 +104,7 @@ function App() {
           <li>"Why should we hire you?" – Your go-to job interview answer</li>
           <li>GitHub, LinkedIn, and social links – Share them in one click</li>
         </ul>
-        <span className="mt-2 flex justify-center gap-5 w-full  items-center font-semibold">Copyright 2025 @ Rohit Singh Panwar
+        <span className="mt-2 flex justify-center gap-5 w-full  items-center font-semibold">© 2025 Rohit Singh Panwar.
           <a href="https://github.com/rohitsinghpanwar/redlink"><img src={githubIcon} alt="github" className='invert h-6 w-6 ' /></a></span>
 
       </footer>
