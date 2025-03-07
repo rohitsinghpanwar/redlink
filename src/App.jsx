@@ -64,7 +64,7 @@ function App() {
 
       <div className="flex flex-col md:flex-row w-full justify-center items-center px-4">
         <form onSubmit={handlesubmit} className="border-2 border-red-600 rounded-xl flex flex-col p-5 m-2 w-full md:w-[40vw] text-xl gap-4 h-[50vh]">
-          <code>Save & Reuse – Your Content, Anytime!</code>
+          <code className='font-semibold'>Save & Reuse – Instantly Access Your Frequently Used Text & Links!</code>
           <label className="flex flex-col w-full">Name
             <input type="text" onChange={handlechange} name="name" value={details.name} className="bg-violet-800 rounded-lg h-12 w-full px-2" required placeholder="Enter the name of the text"/>
           </label>
@@ -97,13 +97,15 @@ function App() {
         <h1 className="flex items-center text-2xl font-bold">
           <span>Red</span><span className="text-red-600">Link</span>
         </h1>
-        <p className="md:text-center">Tired of typing the same text over and over? Save your frequently used links and content in one place and access them instantly whenever you need. Keep your repetitive content handy and organized with ease!</p>
-        <ul className="hidden flex-col items-center mt-2  md:flex">
+        <p className="md:text-center">Tired of typing the same text over and over? RedLink lets you save frequently used links and content for quick access.
+<br />
+No backend, no data tracking—everything is stored in your browser’s local storage and can be deleted anytime with a single click. Stay organized and Never lose a link again !</p>
+        <ul className=" hidden flex-col items-center mt-2  md:flex">
           <li>"Why should we hire you?" – Your go-to job interview answer</li>
           <li>GitHub, LinkedIn, and social links – Share them in one click</li>
         </ul>
-        <span className="mt-2 flex md:justify-center gap-5 w-full  items-center">Copyright 2025 @ Rohit Singh Panwar
-          <a href="https://github.com/rohitsinghpanwar/redlink"><img src={githubIcon} alt="github" className='invert h-4 w-4 md:h-6 md:w-6'/></a></span>
+        <span className="mt-2 flex justify-center gap-5 w-full  items-center font-semibold">Copyright 2025 @ Rohit Singh Panwar
+          <a href="https://github.com/rohitsinghpanwar/redlink"><img src={githubIcon} alt="github" className='invert h-6 w-6 '/></a></span>
         
       </footer>
       <ToastContainer
